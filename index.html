@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mini Paint</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#4f46e5">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Mini Paint">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="toolbar">
+    <h1>🎨 Mini Paint</h1>
+    <div class="group" id="tools">
+      <button data-tool="pen" class="active">✏️ ดินสอ</button>
+      <button data-tool="eraser">🧽 ยางลบ</button>
+      <button data-tool="line">📏 เส้นตรง</button>
+      <button data-tool="rect">⬜ สี่เหลี่ยม</button>
+      <button data-tool="ellipse">⭕ วงรี</button>
+      <button data-tool="fill">🪣 เทสี</button>
+    </div>
+    <div class="group">
+      <label>สี <input type="color" id="color" value="#222222"></label>
+      <label>ขนาด <input type="range" id="size" min="1" max="60" value="4"></label>
+      <span id="sizeLabel">4</span>
+    </div>
+    <div class="group">
+      <button id="undo">↩️ Undo</button>
+      <button id="redo">↪️ Redo</button>
+      <button id="clear">🗑️ ล้าง</button>
+      <button id="save">💾 บันทึก PNG</button>
+      <button id="install" hidden>📲 ติดตั้งแอป</button>
+      <span id="netStatus" class="badge"></span>
+    </div>
+  </header>
+  <main><canvas id="board" width="900" height="560"></canvas></main>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

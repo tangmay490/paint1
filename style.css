@@ -1,0 +1,14 @@
+:root { --bg:#f3f4f6; --panel:#fff; --accent:#4f46e5; }
+* { box-sizing: border-box; }
+body { margin:0; font-family:system-ui,"Noto Sans Thai",sans-serif; background:var(--bg); }
+.toolbar { display:flex; flex-wrap:wrap; gap:12px 20px; align-items:center;
+  padding:10px 16px; background:var(--panel); box-shadow:0 1px 4px #0002; }
+.toolbar h1 { font-size:1.1rem; margin:0; }
+.group { display:flex; flex-wrap:wrap; gap:6px; align-items:center; }
+button { padding:6px 10px; border:1px solid #d1d5db; background:#fff; border-radius:6px; cursor:pointer; }
+button:hover { background:#eef2ff; }
+button.active { background:var(--accent); color:#fff; border-color:var(--accent); }
+main { display:flex; justify-content:center; padding:16px; }
+#board { max-width:100%; background:#fff; box-shadow:0 2px 10px #0003; cursor:crosshair; touch-action:none; }
+.badge { font-size:.85rem; color:#374151; padding:0 6px; }
+[hidden] { display:none !important; }
